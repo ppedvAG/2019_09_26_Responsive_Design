@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block oder Inline</title>
+
+    <style>
+        a{
+            background-color: cyan;
+        }
+
+        button{
+            height: 50px;
+        }
+
+        div{
+            height: 150px;
+            background-color: lavender;
+        }
+
+        form{
+            background-color: bisque;
+        }
+
+        h2{
+            background-color: aquamarine;
+        }
+
+        header{
+            height: 100px;
+            background-color: fuchsia;
+        }
+
+        nav{
+            height: 120px;
+            background-color: orange;
+            margin:0;
+        }
+
+        p{
+            background-color: limegreen;
+        }
+
+        span{
+            background-color: firebrick;
+        }
+
+        table{
+            background-color: yellow;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: thin solid black;
+        }
+
+        textarea{
+            background-color: gray;
+        }
+
+        ul{
+            background-color: rgb(86, 0, 107);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Dies ist eine Überschrift h2 innerhalb eines headers</h2>
+        Dies ist ein header.
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Info</li>
+            <li><a href="#">Shop</a></li>
+        </ul>
+        Dies ist ein nav-Bereich mit einer ul und einem Link.
+    </nav>
+
+    <table>
+        <tr>
+            <td>Bundesland</td>
+            <td>Hauptstadt</td>
+            <td>Wahrzeichen</td>
+        </tr>
+        <tr>
+            <td>Tirol</td>
+            <td>Innsbruck</td>
+            <td>Goldenes Dachl</td>
+        </tr>
+        <tr>
+            <td>Kärnten</td>
+            <td>Klagenfurt</td>
+            <td>Lindwurmbrunnen</td>
+        </tr>
+    </table>
+    Kontrolltext - er beginnt auch ohne break erst in der nächsten Zeile, weil Table ein Block-Element ist!
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <button>OK</button>
+        Ein Formular mit Label, Inputfeld und Button.
+    </form>
+    <textarea></textarea>
+    <p>Dies ist ein Paragraph und darin <span>ist ein span</span> enthalten.</p>
+    
+</body>
+</html>

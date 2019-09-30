@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        .text{
+            background-color: aqua;
+            font-size: 1.3em;
+            font-family: Verdana, Tahoma, sans-serif;
+            padding: 0.5em;
+        }
+        .bg {
+            background-color: aqua;
+        }
+
+        .green {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+        }
+
+        .greenVerticalAlign {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            vertical-align: top;
+        }
+
+        span{
+            font-size: 0.7em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="text">Schau mal in den Code, da siehst Du verschiedene Möglichkeiten, wie die Whitespaces 
+            bei Inline-Block-Elementen weggetrickst werden können. Empfohlene Variante: auskommentieren!
+            Bei den anderen Varianten würde nämlich ein Autoformat alles wieder zunichte machen. <span>
+                Nachtrag: Editorabhängig! Auch die Kommentare werden nun teilweise autoformatiert.
+            </span>
+    </p>
+
+    <!-- Inline-Block-Elemente mit whitespaces -->
+        <div class="bg">
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>       
+    
+        </div>
+        <hr>
+    <!-- Inline-Block-Elemente ohne Whitespaces: Trickserei mit schließendem Tag in nächster Zeile -->    
+
+    <div class="bg">
+            <div class="green">
+                </div><div class="green">
+                </div><div class="green">
+                </div><div class="green">
+                </div><div class="green">
+                </div>       
+
+    </div>
+    <hr>
+
+    <!-- Inline-Block-Elemente ohne Whitepaces: Trickserei mit auskommentierten Zeilenumbrüchen -->
+    <div class="bg">
+            <div class="green"></div><!--
+            --><div class="green"></div><!--
+            --><div class="green"></div><!--
+            --><div class="green"></div><!--
+            --><div class="green"></div>    
+    </div>
+    <hr>
+
+
+    <!-- auch alles "in einer Wurst" zu schreiben, würde dafür sorgen, dass keine Whitespaces vorhanden sind,
+        allerdings würde das die Lesbarkeit des Codes massiv beeinträchtigen
+        Weiters wurde hier durch vertical-align der untere Abstand entfernt -->
+    <div class="bg">
+            <div class="greenVerticalAlign"></div><div class="greenVerticalAlign"></div><div class="greenVerticalAlign"></div><div class="greenVerticalAlign"></div><div class="greenVerticalAlign"></div>       
+
+    </div>
+
+</body>
+
+</html>

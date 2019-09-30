@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid-Basics</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 500px 20% repeat(2, auto);
+            grid-template-rows: 200px auto 100px 500px;
+            grid-row-gap: 10px;
+            grid-column-gap: 50px;
+            /* height: 100vh; */
+        }
+
+        .grid-container>div{
+            /* height: 150px; */
+            /* background-color: aqua; */
+            /* border: 2px solid black; */
+        }
+
+        .grid-item1{
+            background-color: firebrick;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .grid-item2{
+            background-color: coral;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .grid-item3{
+            background-color: lightblue;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .grid-item4{
+            background-color: aqua;
+            grid-column: 3/5;
+            grid-row: 2/4;
+        }
+
+        .grid-item5{
+            background-color: cadetblue;
+            grid-column: 3/5;
+            grid-row: 4/5;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- zum Nachlesen: bei CSS-Tricks toller Artikel: -->
+    <!-- https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+
+    <div class="grid-container">
+        <div class="grid-item1"></div>
+        <div class="grid-item2"></div>
+        <div class="grid-item3"></div>
+        <div class="grid-item4"></div>
+        <div class="grid-item5"></div>
+    </div>
+</body>
+</html>

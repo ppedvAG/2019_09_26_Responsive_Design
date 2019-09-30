@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <!-- BEACHTE DEN UNTERSCHIED auf einem kleinen Gerät (beispielsweise in der Developer-Ansicht),
+             wenn die folgende Zeile aktiviert/auskommentiert ist! -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Picture-TAG</title>
+    </head>
+
+    <body>
+
+        <!-- Ist der Viewport mindestens 1024px breit, wird das große Bild verwendet.
+             Ist der Viewport mindestens 800px breit, aber kleiner als 1024px, wird das mittlere Bild verwendet.
+             Ist der Viewport kleiner als 800px, wird das kleine Bild verwendet.
+        -->
+
+        <picture>
+            <source media="(min-width: 1024px)" srcset="../../images/large.jpg" />
+            <source media="(min-width: 800px)" srcset="../../images/medium.jpg" />
+            <source srcset="../../images/small.jpg" />
+
+            <img src="../../images/large.jpg" alt="1024er Bild" />
+        </picture>
+
+    </body>
+
+</html>

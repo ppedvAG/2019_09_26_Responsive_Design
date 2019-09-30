@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-size: 20px;
+}
+
+.company-name-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-family: 'Bauhaus 93', sans-serif;
+    font-size: 2em;
+    background-color: coral;
+    color: white;
+}
+
+.logo-container{
+    height: 100px;
+}
+
+.logo-container>img{
+    height: 100%;
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 40px;
+}
+
+ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+li{
+    float: left;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: coral;
+    padding: 10px;
+}
+
+a:hover{
+    background-color: coral;
+    color: white;
+}
+
+.text-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.text-box{
+    width: 22%;
+    border: 2px solid coral;
+    background: linear-gradient(white, coral);
+    border-radius: 5px;
+    padding: 15px;
+    color: rgb(61, 61, 61);
+}
+
+
+.img-container{
+    padding: 20px 50px;
+    border-top: 2px dashed coral;
+}
+
+.img-container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.img-box{
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+
+.img-box>img{
+    width: 100%;
+}
+
+
+.main-footer{
+    background-color: coral;
+}
+
+
+
+/* TEST ******************************** */
+.test{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid green;
+    position: relative;
+}
+
+.inner-test{
+    height: 150px;
+    width: 150px;
+    background-color: cyan;
+}
+
+.absolute{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+
+@media screen and (max-width: 1200px){
+
+    .company-name-container{
+        font-size: 1.2em;
+    }
+    
+    .logo-container{
+        display: none;
+    }
+
+    li{
+        float: none;
+    }
+
+    .text-container{
+        flex-wrap: wrap;
+    }
+
+    .text-box{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+
+
+    .img-box{
+        width: 50%;
+    }
+
+
+    /* TEST **************************+ */
+    .absolute{
+        background-color: green;
+        top: 10px;
+        left: 50px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    li>a{
+        display: block;
+    }
+    
+    .text-box{
+        width: 100%;
+        border-radius: unset;
+    }
+
+    .img-box{
+        width: 100%;
+    }
+
+}

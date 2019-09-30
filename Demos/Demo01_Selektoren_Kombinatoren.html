@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo: Selektoren</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 100%;
+            background-color: rgb(202, 230, 255);
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0.3em auto;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin: 0.3em auto;
+        }
+
+        p {
+            margin: 0.5em auto;
+        }
+
+        header {
+            margin-bottom: 2em;
+        }
+
+        code {
+            font-size: 1rem;
+            background-color: rgb(202, 230, 255);
+            padding: 0.2em;
+        }
+
+        #wrapper {
+            background-color: beige;
+            min-height: 100vh;
+            padding: 3em;
+            width: 75%;
+            margin: 0px auto;
+        }
+
+        .poem,
+        .explanation {
+            background-color: aliceblue;
+            padding: 2em;
+            font-family: 'Bookman Old Style', serif;
+            float: left;
+            margin: auto 2em 2em auto;
+            font-size: 0.85em;
+        }
+
+        .explanation {
+            width: 60%;
+            font-family: inherit;
+        }
+
+        .underlined {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .clearboth {
+            clear: both;
+        }
+
+
+
+        /* ------ STYLING MITTELS VERSCHIEDENER SELEKTOREN: ------ */
+
+        /* Benachbarte-Geschwister-Kombinator: hier wird nur ein Div, welches unmittelbar auf den Header folgt, mit einem Rahmen versehen */
+
+        header+div {
+            border: medium solid navy;
+            border-radius: 1em;
+        }
+
+        /* Allgemeiner Geschwister-Kombinator: alle p-Elemente, die Geschwister eines divs sind (also auf der gleichen Ebene liegen)
+            Beachte: die erste Gedichtzeile und der Name sind davon NICHT betroffen. Die erste Zeile ist selbst ein Div, der Name steht in 
+            einem p-Element INNERHALB eines divs. */
+
+        div~p {
+            color: firebrick;
+        }
+
+        div>p {
+            font-style: italic;
+        }
+
+        /* Pseudo-Element-Selektor ::first-letter */
+
+        .initiale::first-letter {
+            font-family: 'Vivaldi', serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: navy;
+        }
+
+        /* Pseudo-Klassen-Selektor :hover */
+
+        .author-name:hover {
+            color: cyan;
+            text-shadow: 0.1em 0.1em 0.3em navy;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>
+                Beispiel: Selektoren und Kombinatoren
+            </h1>
+            <p>
+                Die Zeilen in diesem Gedicht sind unterschiedlich gestylt. Um die einzelnen Elemente anzusprechen, wurden Nachfahren-, Kind-
+                und Geschwisterkombinatoren verwendet, sowie der Pseudo-Klassen-Selektor
+                <code>:hover</code> und der Pseudo-Element-Selektor
+                <code>::first-letter</code>. Beachte die Kommentare im Code!
+            </p>
+        </header>
+
+        <div class="poem">
+            <h2>Der Zauberlehrling</h2>
+            <div>
+                <div>
+                    <div class="initiale"> Hat der alte Hexenmeister</div>
+                    <p> Sich doch einmal wegbegeben!</p>
+                    <p>Und nun sollen seine Geister</p>
+                    <p>Auch nach meinem Willen leben.</p>
+                    <p>Seine Wort und Werke</p>
+                    <p>Merkt ich und den Brauch,</p>
+                    <p>Und mit Geistesstärke</p>
+                    <p>Tu ich Wunder auch.</p>
+                </div>
+            </div>
+            <br>
+            <p>Walle! walle</p>
+            <p>Manche Strecke,</p>
+            <p>Daß, zum Zwecke,</p>
+            <p>Wasser fließe</p>
+            <p>Und mit reichem, vollem Schwalle</p>
+            <p>Zu dem Bade sich ergieße.</p>
+            <p>[...]</p>
+            <br/>
+            <div>
+                <p class="author-name">Johann Wolfgang von Goethe</p>
+            </div>
+        </div>
+        <div class="explanation">
+            <span class="underlined">Benachbarte-Geschwister-Kombinator:</span>
+            <p>Durch
+                <code>header+div</code> wurde hier nur das Div, welches unmittelbar auf den Header folgt, mit einem Rahmen versehen.
+            </p>
+            <span class="underlined">Allgemeiner Geschwister-Kombinator:</span>
+            <p>Durch
+                <code>div~p</code> werden alle p-Elemente, die Geschwister eines div-Elements sind (also auf der gleichen Ebene liegen), rot
+                dargestellt. Beachte: Die erste Gedichtzeile und der Name sind davon NICHT betroffen. Die erste Zeile ist
+                selbst ein Div, der Name steht in einem p-Element INNERHALB eines Divs.
+            </p>
+
+            <span class="underlined">Kind-Kombinator:</span>
+            <p>
+                Mit dem Kind-Kombinator
+                <code>div>p</code> wurden alle p-Elemente, die Kind-Elemente eines Divs sind, kursiv geschrieben. Beachte, dass die erste Zeile
+                des Gedichtes nicht kursiv ist: sie liegt innerhalb eines Divs.
+            </p>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

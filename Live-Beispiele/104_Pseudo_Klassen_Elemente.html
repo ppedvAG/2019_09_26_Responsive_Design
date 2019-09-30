@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo-Klassen und -Elemente</title>
+    <style>
+        /* Pseudo-Klassen */
+        a:hover {
+            color: gold;
+        }
+
+        /* a:link, a:visited, a:active... */
+        /* :last-child, :first-child */
+
+        /* Pseudo-Elementen */
+        p::first-letter {
+            font-family: Parchment, fantasy;
+            font-size: 42px;
+        }
+
+        .test1::before{
+            content: "";
+            display: block;
+            border-top: 2px solid gold;
+        }
+
+        .float-container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .test1::first-line{
+            font-style: italic;
+        }
+
+        span{
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float-container">
+        <p>Das ist <a href="#">Paragraph</a> Nr. 1.</p>
+        <p>Das ist Paragraph Nr. 2.</p>
+        <p>Das ist Paragraph Nr. 3.</p>
+        <p>Das ist Paragraph Nr. 4.</p>
+        <p>Das ist Paragraph Nr. 5.</p>
+        <p class="test1"> <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> Iusto praesentium reiciendis dolorem
+            libero veniam, nisi excepturi alias vero? Pariatur, soluta? Consectetur animi nihil sint hic deleniti
+            provident distinctio earum quo velit sapiente enim ut ipsam voluptatum repellat ipsum temporibus laborum
+            esse dicta sequi maiores voluptate soluta veritatis, quia autem. Adipisci?
+        </p>
+
+    </div>
+
+</body>
+
+</html>

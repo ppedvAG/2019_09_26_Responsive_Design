@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hintergrundbilder</title>
+    <style>
+        body{
+            background-image: url('images/autumn2.jpg');
+            background-repeat: no-repeat;
+            /* background-image: url('images/bg_muster3.jpg'), url('images/bg_muster1.jpg'); */
+            /* background-repeat: repeat-y, no-repeat; */ /* round, center, repeat-x, repeat-y */
+            /* background-position: left, right; */
+            /* background: radial-gradient(yellow, green);*/
+            background-attachment: fixed; /* damit bleibt Bild fix und wandert beim Scrollen nicht hoch */
+        }
+
+        .container{
+            height: 4000px;
+            width: 550px;
+            border: 2px solid red;
+            background-color: cadetblue;
+            background-image: url('images/bg_eule.jpg');
+            background-repeat: no-repeat;
+            background-size: contain; /* 100%, 400px, cover, 100% 100%, 30% 100% */
+        }
+
+        .container2{
+            height: 400px;
+            width: 550px;
+            border: 2px solid red;
+            background-color: yellow;
+            background: linear-gradient(60deg, white, #7e7eec, rgb(126, 126, 236));
+        }
+/* 
+        12 * 16^0 + 14*16^1 
+        a 10
+        b 11
+        c 12
+        d 13
+        e 14
+        f 15 
+*/
+        .container3{
+            height: 400px;
+            width: 700px;
+            border: 2px solid red;
+            background-color: yellow;
+            background: radial-gradient(white, blue);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container"></div>
+    <div class="container2"></div>
+    <div class="container3"></div>
+
+</body>
+</html>

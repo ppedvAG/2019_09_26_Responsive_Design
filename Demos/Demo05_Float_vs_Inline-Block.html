@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .floatcontainer {
+            background-color: lightgreen;
+            min-height: 20px;
+        }
+
+        .red {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin: 5px;
+            float: left;
+        }
+
+        .blue {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+             margin: 5px;
+            /* Aufgabe: Was passiert bei float bzw. inline-block, wenn man margin weglässt? */
+            display: inline-block;
+
+        }
+
+        .blockcontainer {
+            background-color: rgb(255, 225, 170);
+            /* text-align: right; */
+        }
+
+        .clearboth {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="floatcontainer">
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="clearboth"></div>
+    </div>
+    <hr>
+    <div class="blockcontainer">
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selektoren</title>
+
+    <style>
+        /* Universalselektor */
+
+        *{
+            /* margin: 0;
+            padding: 0;
+            box-sizing: border-box; */
+        }
+
+        /* Typselektor */
+        p{
+            /* wählt alle p aus (alle Elemente eines bestimmten Typs) */
+        }
+
+        /* Klassenselektor */
+        .myClass{
+            /* wählt alle Elemente aus, die diese Klasse haben (class="myClass") */
+        }
+
+        /* ID-Selektor */
+        #myGreatID{
+            /* wählt das Element mit dieser ID aus (id="myGreatID") - EINDEUTIG! */
+        }
+
+        /* Attributselektoren */
+        a[target]{
+            background-color: aqua;
+        }
+
+        /* bestimmter Wert */
+        a[target="_blank"]{
+            font-style: italic;
+        }
+
+        /* soll mit bestimmten Zeichen beginnen */
+
+        /* .myClass1, .myClass2, .myClass3...{} */
+        p[class^="myC"]{
+            color: chartreuse;
+        }
+
+        a[role="button"]{
+            /* mein Button-Styling */
+        }
+
+        /* LOVE/HATE - Reihenfolge */
+        /* 
+        a:link{}
+        a:visited{}
+        a:hover{}
+        a:active{} 
+        */
+
+        /* womit hörts auf */
+        p[class$="s3"]{
+            font-style: italic;
+        }
+
+        /* muss Zeichenfolge enthalten */
+
+        p[class*="as"]{
+            font-weight: bold;
+        }
+
+
+
+    
+    </style>
+</head>
+<body>
+    
+    <!-- 
+        <ul>
+        <li>testtext</li>
+        <li>testtext</li>
+        <li>testtext</li>
+    </ul> 
+    -->
+    <a href="#" target="_blank">Mein toller Link</a>
+    <a href="#" >Mein toller Link</a>
+    <a href="#" target="_self">Mein toller Link</a>
+    <p class="myClass1">Lorem ipsum dolor sit amet.</p>
+    <p class="myClass2">Lorem ipsum dolor sit amet.</p>
+    <p class="myClass3">Lorem ipsum dolor sit amet.</p>
+    <p class="myClass4">Lorem ipsum dolor sit amet.</p>
+    <p class="myClass5">Lorem ipsum dolor sit amet.</p>
+    <p class="snickers3">Lorem ipsum dolor sit amet.</p>
+
+    <button>OK</button>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kombinatoren</title>
+    <style>
+        /* Nachfahren-Kombinator (descendant selector) */
+        div p{
+            color: aqua;
+        }
+
+        div span{
+            font-size: 42px;
+        }
+
+        /* Kind-Kombinator (child selector) */
+        div>p{
+            font-style: italic;
+        }
+
+        div>span{
+            text-decoration: underline;
+        }
+
+        /* Geschwister-Kombinatoren (sibling selectors) */
+        /* Allgemeiner Geschwister-Kombinator */
+        h1~p{
+            background-color: cadetblue;
+        }
+
+        /* Benachbarter Geschwister-Kombinator */
+        h1+p{
+           font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Meine tolle Überschrift</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>Das ist ein span</span>
+        <p>P1 Lorem ipsum dolor sit amet.</p>
+        <p>P2 Lorem ipsum dolor sit amet.</p>
+        <p>P3 Lorem ipsum dolor sit amet.</p>
+        <p>Paragraph <span>Das ist ein span in einem p</span></p>
+        <div>
+            <p>P im inneren Div - Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</body>
+</html>

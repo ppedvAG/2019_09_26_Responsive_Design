@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bilder</title>
+    <style>
+        .img-container1 {
+            width: 50%;
+            border: 2px solid black;
+        }
+
+        .img-container1>img {
+            width: 100%;
+            display: block;
+        }
+
+        .img-container2{
+            width: 50%;
+            border: 2px solid red;
+        }
+
+        .img-container2>img{
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="img-container1">
+        <img src="../../images/autumn2_small.jpg" alt="Herbstblätter">
+    </div>
+
+    <div class="img-container2">
+        <img src="../../images/autumn2_small.jpg" alt="Herbstblätter">
+    </div> -->
+
+    <picture>
+        <source media="(min-width: 1000px)" srcset="images/autumn2.jpg">
+        <source media="(min-width: 600px)" srcset="images/bg_eule.jpg">
+        <img src="images/autumn1.jpg" alt="Herbstlandschaft">
+    </picture>
+
+
+</body>
+
+</html>

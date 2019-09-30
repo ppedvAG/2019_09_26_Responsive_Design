@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        @media screen {
+
+
+            .content {
+                column-count: 3;
+                column-gap: 50px;
+                column-rule: medium solid darkgray;
+                background-color: lightblue;
+                width: 100%;
+                padding: 35px 50px;
+                text-align: justify;
+            }
+
+            h1 {
+                column-span: all;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media print {
+
+
+            .content {
+                column-count: 3;
+                column-gap: 50px;
+                column-rule: medium solid darkgray;
+                background-color: red;
+                width: 100%;
+                padding: 35px 50px;
+                text-align: justify;
+            }
+
+            h1 {
+                column-span: all;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Überschrift für Beispieltext</h1>
+
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+        kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit
+        in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+        et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+        magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+        nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+        consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+        praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend
+        option congue nihil imperdiet doming id quod mazim placerat facer. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Neque suscipit odit quidem hic distinctio saepe at fugit molestiae repudiandae possimus, vel magnam perspiciatis
+        officiis, sapiente, soluta ut dolorum recusandae ullam consequuntur natus aperiam! Deleniti, cumque. Similique distinctio
+        in tempora deleniti eos dignissimos suscipit quis magnam maxime odio itaque illo porro asperiores a corrupti ipsa
+        quos, sapiente ad magni sint libero delectus vero quam voluptatum. Ullam, magni rerum exercitationem perspiciatis
+        molestias nemo quis consequatur ad veniam aspernatur. Reprehenderit provident neque officia perspiciatis mollitia
+        cumque, quaerat excepturi fuga autem! Aliquid excepturi nulla ad suscipit vero fuga similique officia? Autem sint
+        voluptates ullam!
+    </div>
+
+</body>
+
+</html>

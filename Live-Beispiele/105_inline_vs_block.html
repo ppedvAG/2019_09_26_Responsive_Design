@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline vs Block</title>
+
+    <style>
+        .btn-ok {
+            display: block;
+        }
+
+        .test1 {
+            width: 50px;
+            height: 50px;
+            border: 2px solid green;
+            background-color: greenyellow;
+            display: inline-block;
+        }
+
+        .inline {
+            display: inline;
+            width: 100px;
+            /* geht nicht, weil inline! */
+        }
+
+        .block {
+            display: block;
+            width: 100px;
+            background-color: aqua;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+            /* background-color: aqua; */
+        }
+
+        .img-container{
+            width: 400px;
+        }
+
+        .img-container>img{
+            width: 100%;
+            border: 2px solid green;
+            /* display: block; */
+        }
+
+        .minipic{
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn-ok">OK</button>
+    <button class="btn-ok">OK</button>
+    <button class="btn-ok">OK</button>
+    <div class="test1"></div>
+    <div class="test1"></div>
+    <div class="test1"></div>
+    <div class="test1"></div>
+    <div class="test1"></div>
+
+    <form action="">
+
+        <!-- inline -->
+        <div class="inp-container">
+            <label for="first-name" name="first-nameXX" class="inline">Vorname:</label>
+            <input type="text" id="first-name">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" name="last-nameXX" class="inline">Nachname:</label>
+            <input type="text" id="last-name">
+        </div>
+        <div class="inp-container">
+            <label for="pw" name="pw" class="inline">Passwort:</label>
+            <input type="password" id="pw">
+        </div>
+
+        <!-- block -->
+        <div class="inp-container">
+            <label for="first-name" name="first-nameXX" class="block">Vorname:</label>
+            <input type="text" id="first-name">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" name="last-nameXX" class="block">Nachname:</label>
+            <input type="text" id="last-name">
+        </div>
+        <div class="inp-container">
+            <label for="pw" name="pw" class="block">Passwort:</label>
+            <input type="password" id="pw">
+        </div>
+
+        <!-- inline-block -->
+        <div class="inp-container">
+            <label for="first-name" name="first-nameXX" class="inline-block">Vorname:</label>
+            <input type="text" id="first-name">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" name="last-nameXX" class="inline-block">Nachname:</label>
+            <input type="text" id="last-name">
+        </div>
+        <div class="inp-container">
+            <label for="pw" name="pw" class="inline-block">Passwort:</label>
+            <input type="password" id="pw">
+        </div>
+    </form>
+    <hr>
+    <div class="img-container">
+        <img src="images/autumn1.jpg" alt="autumnleaves">
+    </div>
+    <img src="images/autumn1.jpg" alt="autumnleaves" class="minipic">
+    <img src="images/autumn1.jpg" alt="autumnleaves" class="minipic">
+    <img src="images/autumn1.jpg" alt="autumnleaves" class="minipic">
+
+    <!--  
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+    <button>OK</button>
+ -->
+
+</body>
+
+</html>

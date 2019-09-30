@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>flexbox</title>
+    <style>
+        .flex-container {
+            /* background-color: cadetblue; */
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            /* erlaubt das Umspringen in die nächste Zeile */
+            /* justify-content: center; */
+            /* horizontale Ausrichtung */
+            /* center, space-between, space-around; 
+                                        default: start (wie float: left) */
+            /* align-content: stretch; */
+            /* vertikale Ausrichtung */
+            /* height: 500px; */
+        }
+
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            /* height: 150px; */
+            box-sizing: border-box;
+            width: 33.3333333%;
+            padding: 20px;
+            font-size: 28px;
+            border: 2px solid darkblue;
+            background-color: deepskyblue;
+            /* margin: 50px; */
+            line-height: 1.5;
+        }
+
+        .button-div{
+            box-sizing: border-box;
+            height: 100px;
+            width: 150px;
+            border: 1px solid black;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .button-div2{
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 150px;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1 <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, rerum. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nisi aperiam maxime amet. Illo fugiat illum et est earum, at
+            exercitationem? --></div>
+        <div class="flex-item">
+
+            Hat der alte Hexenmeister <br>
+            sich doch einmal wegbegeben <br>
+            und nun sollen seine Geister <br>
+            auch nach meinem Willen leben.
+            
+        </div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div id="test" class="flex-item">9</div>
+    </div>
+<hr>
+    <div class="button-div">Abschicken</div>
+
+    <div class="button-div2">Abschicken</div>
+
+
+    <script>
+        
+        $(document).ready(function(){
+
+            $('#test').click(function(){
+                $(this).hide();
+            });
+
+        });
+
+
+    </script>
+</body>
+
+</html>

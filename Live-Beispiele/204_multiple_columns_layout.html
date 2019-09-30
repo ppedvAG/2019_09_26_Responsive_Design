@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>multiple columns layout</title>
+    <style>
+        .text-box {
+            background-color: cadetblue;
+            column-count: 3;
+            column-gap: 100px;
+            column-rule: 4px dotted lightblue;
+            padding: 50px;
+            text-align: justify;
+        }
+
+        .text-box>h1 {
+            column-span: all;
+        }
+
+        .img-container{
+            column-count: 3;
+            column-gap: 100px;
+            height: 900px;
+            border: 2px solid red;
+        }
+
+        .img-box{
+            width: 80%;
+        }
+
+        .img-box>img{
+            width: 100%;
+            display: block;
+        }
+
+        .box-container{
+            column-count: 3;
+            column-gap: 100px;
+            height: 500px;
+            border: 2px solid red;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-box">
+        <h1>Meine tolle laaaaaaaaaaaaaaaaaaaaaaaaaange Überschrift</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consequuntur itaque laborum inventore
+        consectetur? Laborum, tempora dicta? Sed praesentium quisquam voluptatibus tempore error quasi alias similique
+        aliquid eaque officiis vel harum impedit iusto officia commodi dignissimos atque aliquam est, placeat odit
+        magnam molestias doloribus exercitationem. Expedita, ipsam veritatis? Harum voluptatum similique facilis iste
+        quo incidunt vel consequatur id accusamus eligendi, debitis est voluptatibus tempore officiis repellat!
+        Inventore, at, blanditiis tempora harum rem aperiam officia commodi placeat autem incidunt fugiat sunt nam neque
+        est fuga, totam sapiente. Quo earum officia quisquam architecto assumenda autem corporis a ratione illo
+        repudiandae dicta sit porro, repellendus repellat, dolorem ex ut perspiciatis in excepturi nobis, eius
+        voluptatum doloribus vitae! Iure tenetur in similique blanditiis dolorum. Deserunt adipisci impedit quidem
+        laboriosam sunt earum quo cumque rerum asperiores debitis illo nisi eum porro at molestiae, inventore, eos
+        explicabo voluptates nesciunt minima totam dignissimos? Soluta voluptas rem ipsum laboriosam magnam est commodi
+        similique quibusdam eos sunt eaque vitae, amet, debitis harum. Quibusdam a officia inventore veniam, tempora
+        cupiditate accusamus doloribus at provident doloremque vitae odio omnis ab accusantium ex nulla, ratione quo
+        necessitatibus perferendis itaque cum unde mollitia. Mollitia praesentium repellendus obcaecati sunt quae,
+        voluptatum consequatur veritatis earum.
+    </div>
+
+    <div class="img-container">
+        <h1>NICHT so machen:</h1>
+        <div class="img-box">
+            <img src="../../images/autumn2.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn1.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn2.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn1.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn2.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn1.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn2.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn1.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="../../images/autumn2.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="images/autumn1.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="box-container">
+        <h1>NICHT so machen:</h1>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

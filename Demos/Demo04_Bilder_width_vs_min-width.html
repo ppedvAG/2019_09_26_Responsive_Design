@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bilder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(182, 255, 255);
+            font-family: Tahoma, sans-serif;
+            color: rgb(32, 32, 32);
+        }
+
+        h1{
+            font-size: 1.8rem;
+            margin: 1rem;
+        }
+
+        p{
+            font-size: 1em;
+            margin-left: 1rem;
+        }
+
+        #wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .img-container {
+            width: 40%;
+            height: auto;
+            margin: 3em auto;
+            padding: 2em;
+            border: medium solid rgb(139, 121, 0);
+            background-color: rgb(255, 248, 205);
+        }
+
+        #img1 {
+            width: 100%;
+            height: auto;
+        }
+
+        #img2 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            margin-bottom: 0.5em;
+            font-family: inherit;
+            color: rgb(0, 54, 99);
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Width vs. Max-Width bei Bildern</h1>
+    <p>Beachte, dass das rechte Bild beim Skalieren zwar kleiner wird, beim Vergrößern aber nicht größer, 
+        als seine Originalgröße.</p>
+
+    <div id="wrapper">
+        <div class="img-container">
+            <figure>
+                <figcaption>Bild mit
+                    <code>width:100%;</code>
+                </figcaption>
+                <img id="img1" src="../Live-Beispiele/images/bild_klein.jpg" alt="Möwe am Strand" />
+
+            </figure>
+        </div>
+        <div class="img-container">
+            <figure>
+                <figcaption>Bild mit
+                    <code><span>max-</span>width:100%;</code>
+                </figcaption>
+                <img id="img2" src="../Live-Beispiele/images/bild_klein.jpg" alt="Möwe am Strand" />
+
+            </figure>
+        </div>
+    </div>
+</body>
+
+</html>

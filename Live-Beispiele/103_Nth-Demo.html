@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NTH-Demo</title>
+
+    <style>
+        /* 
+        p:nth-child(3){
+            color: forestgreen;
+        } 
+        */
+
+        /* odd = ungerade, even = gerade */
+
+        p:nth-child(odd) {
+            color: red;
+        }
+
+        p:nth-child(even) {
+            color: green;
+        }
+
+        /* wie "odd" */
+        /* 
+        p:nth-child(2n+1){
+            color: blue;
+        } 
+        */
+
+        /* wie even */
+        /* 
+        p:nth-child(2n){
+            color: blue;
+        } 
+        */
+
+        /* jedes 3. Element p, beginnend beim 1. */
+        /* 
+        p:nth-child(3n+1){
+            color: blue;
+        }
+        */
+
+        p:nth-of-type(odd) {
+            font-style: italic;
+        }
+
+        .test1 {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th,
+        td {
+            border: 2px solid white;
+            width: 25%;
+            /* height: 50px; */
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(182, 182, 255);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(235, 235, 252);
+        }
+
+        th {
+            background-color: blue;
+        }
+
+        td{
+            padding: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Das ist der 1. Paragraph.</p>
+    <p>Das ist der 2. Paragraph.</p>
+    <p>Das ist der 3. Paragraph.</p>
+    <div class="test1"></div>
+    <p>Das ist der 4. Paragraph.</p>
+    <p>Das ist der 5. Paragraph.</p>
+    <p>Das ist der 6. Paragraph.</p>
+    <p>Das ist der 7. Paragraph.</p>
+    <p>Das ist der 8. Paragraph.</p>
+
+
+<!--  Übung: Tabellenstyling mit nth-... -->
+    <table>
+        <caption>Tabellenüberschrift</caption>
+        <thead>
+            <tr>
+                <th>Überschrift</th>
+                <th>Überschrift</th>
+                <th>Überschrift</th>
+                <th>Überschrift</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtextl lskj lskj lsklds ljlkjlks lkjdlkj slsjklsl slkjd lskjlfk lksjlkjlk lskdjlk slkjl kdksjlkj lskdjlskjlkjf sf </td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr>
+            <!-- <tr>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+                <td>testtext</td>
+            </tr> -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Leos Tabelle</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
